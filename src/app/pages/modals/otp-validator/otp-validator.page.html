@@ -1,0 +1,77 @@
+<ion-content class="ion-padding otp-validator-page-content" overflow-scroll="false">
+  <app-loading-spinner *ngIf="loading"></app-loading-spinner>
+  
+  <div class="otp-page-cancel-button-div">
+    <ion-button class="otp-page-cancel-button" shape="round" color="medium" (click)="closeModal()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="otp-validator-page-container container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <h3 class="prompt">Please enter the code we sent to your<br/>mobile number to continue.</h3>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <!-- <h5 *ngIf="showErroMessage" class="otp-error-message">Sorry, you have provided a invalid code.</h5> -->
+          <form [formGroup]="otpForm" (ngSubmit)="verify()" data-autosubmit="false" autocomplete="off" class="otp-digit-group">
+            <ion-input formControlName="otpInput1" clear-on-edit="true" (ionChange)="setFocus(otpInput1, otpInput2)" maxlength="1"  type="number" inputmode="numeric" [ngClass]="(didSubmit && errorControl.otpInput1.errors) ? 'otp-input-error':''"  #otpInput1></ion-input>
+            <ion-input formControlName="otpInput2" clear-on-edit="true" (ionChange)="setFocus(otpInput2, otpInput3)"  maxlength="1" type="number" inputmode="numeric" [ngClass]="(didSubmit && errorControl.otpInput2.errors) ? 'otp-input-error':''" #otpInput2></ion-input>
+            <ion-input formControlName="otpInput3" clear-on-edit="true" (ionChange)="setFocus(otpInput3, otpInput4)" maxlength="1" type="number" inputmode="numeric"  [ngClass]="(didSubmit && errorControl.otpInput3.errors) ? 'otp-input-error':''" #otpInput3></ion-input>
+            <!-- <span class="splitter">&ndash;</span> -->
+            <span class="splitter"></span>
+            <ion-input formControlName="otpInput4" clear-on-edit="true" (ionChange)="setFocus(otpInput4, otpInput5)" maxlength="1" type="number" inputmode="numeric"  [ngClass]="(didSubmit && errorControl.otpInput4.errors) ? 'otp-input-error':''" #otpInput4></ion-input>
+            <ion-input formControlName="otpInput5" clear-on-edit="true" (ionChange)="setFocus(otpInput5, otpInput6)" maxlength="1" type="number" inputmode="numeric"  [ngClass]="(didSubmit && errorControl.otpInput5.errors) ? 'otp-input-error':''" #otpInput5></ion-input>
+            <ion-input formControlName="otpInput6" clear-on-edit="true" maxlength="1" type="number" inputmode="numeric" [ngClass]="(didSubmit && errorControl.otpInput6.errors) ? 'otp-input-error':''" #otpInput6></ion-input>
+          </form>      
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="error-message-container">
+            <ion-item  lines="none" *ngIf="showOtpError || otpMessage" >
+              <ion-icon slot="start" *ngIf="showOtpError" class="error-message-icon otp-error-icon" name="alert-circle" color="danger"></ion-icon>  
+              <span *ngIf="otpMessage" class="otp-error-message"> {{ otpMessage }} </span>
+            </ion-item>
+            <!-- <ion-icon *ngIf="showOtpError" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon> -->
+            
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="secondary" (click)="verify()" class="account-input-ion-button">
+            <span color="primary">Verify</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+          <div class="sign-in-container div-divider">
+            <ion-grid>
+              <!-- <ion-row>
+                <ion-col>
+                  <h4 class="horizontal-line otp-horizontal-line"><span class="">or</span></h4>
+                </ion-col>
+              </ion-row> -->
+              <ion-row>
+                <ion-col>
+                  <div class="ion-text-wrap">
+                    <span class="account-input-other-option otp-input-other-option">Did not receive the code? <a (click)="sendOTP()" class="account-input-other-option-link otp-input-other-option-link">Click here to resend.</a></span>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          
+        </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    
+  </div>
+</ion-content>

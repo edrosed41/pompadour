@@ -1,0 +1,55 @@
+<ion-card class="app-booking-card" [ngClass]="ongoing?'appointment-ongoing':'' || past?'past-booking': ''">
+  <ion-card-content class="ion-no-padding">
+    <ion-grid class="booking-card-grid">
+      <ion-row class="booking-card-row-top">
+        <ion-col class="booking-card-col-left">
+          <ion-label class="appointment-card-client-name">
+            <!-- {{ appointment?.serviceProvider.fullname}} -->
+            {{ appointment.clientName || 'Default Client'}}
+          </ion-label>
+          <ion-label [ngClass]="past?'past-booking': ''"  class="appointment-card-client-address">
+            <!-- {{ appointment?.serviceProvider.organization }} -->
+            {{ appointment.bookingAddress || 'Default Booking Address'}}
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="booking-card-row-bottom">
+        <ion-col size="1">
+          <!-- <mat-icon class="search-card-provider-rating-icon material-icons md-26 primary">build</mat-icon> -->
+          <ion-icon style="zoom:1.5" [src]="serviceIcon" class="service-icon"></ion-icon>
+        </ion-col>
+        <ion-col class="appointment-card-col-service ion-no-padding ion-no-margin" size="6">
+            <ion-label class="appointment-card-service-name">
+              <!-- {{ appointment?.serviceSelected?.name }} -->
+              {{ appointment.serviceName || 'Men\'s Haircut'}}
+            </ion-label>
+            <ion-label [ngClass]="past?'past-booking': ''"  class="appointment-card-service-time">
+              <!-- {{ appointment?.serviceSelected?.duration }} -->
+              {{ appointment.duration || 'N/A'}}
+            </ion-label>
+        </ion-col>  
+        <ion-col class="booking-card-col-right ion-no-padding" size="4">
+          <ion-row>
+            <ion-col class="ion-no-padding">
+              <ion-label class="appointment-card-datetime-label">
+                {{ appointment.bookingDate || 'Jan 1, 2000/0:00 AM'}}
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding">
+              <ion-col>
+                <ion-label class="appointment-service-price-label">
+                  <!-- {{ appointment?.totalFee | stringcurrency }} -->
+                  {{ appointment.amount | stringcurrency}}
+                </ion-label>
+              </ion-col>
+              <ion-col class="booking-card-col-right booking-card-next-icon" size="1" >
+                <ion-icon *ngIf="!past" color="secondary" name="chevron-forward-outline" style="zoom:1.5" ></ion-icon>
+              </ion-col>
+          </ion-row>
+        </ion-col>  
+          <!-- <mat-icon class="material-icons md-18 secondary">arrow_forward_ios</mat-icon> -->
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

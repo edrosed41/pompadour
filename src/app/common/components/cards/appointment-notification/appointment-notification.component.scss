@@ -1,0 +1,49 @@
+.appointment-card {
+    font-size: 11px !important;
+    line-height: 16px !important;
+}
+
+.notification-unread {
+    background: #fff;
+    --background: #fff;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.notification-read {
+    background: var(--ion-color-light);
+    font-style: italic;
+    color: var(--ion-color-medium-tint);
+}
+
+ion-card {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.label-unread {
+    color: var(--ion-color-secondary);
+    font-weight: 400;
+}
+
+.label-read {
+    color: var(--ion-color-medium-tint);
+}
+
+.read-label {
+    color: var(--ion-color-tertiary);
+    text-align: right;
+}
+
+.appointment-card-icon-bell {
+    position: absolute;
+    margin-top: 50%;
+}
+
+.appointment-card-icon-go {
+    position: absolute;
+    bottom: 2px;
+}
+
+ion-icon {
+    color: var(--ion-color-light-shade);
+}

@@ -1,0 +1,49 @@
+<ion-card>
+  <ion-card-content class="ion-no-padding appoitnment-card">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" class="icon-col ">
+          <!-- <ion-icon class="icon-user-earning" src="assets/images/earnings-2.svg"></ion-icon> -->
+          <ion-icon class="icon-user-earning" name="person-circle"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          <ion-row class="ion-no-padding ion-no-margin">
+
+            <ion-col class="ion-no-padding ion-no-margin">
+              <!-- <div *ngFor="let s of arrayTransform(rating?.rating); let starIndex = index">
+                <ion-button>
+                  <ion-icon *ngIf="star != 0 && star >= (starIndex+1)" color="secondary" slot="icon-only" name="star"></ion-icon>
+                  <ion-icon *ngIf="star < (starIndex+1)" slot="icon-only" color="secondary" name="star-outline"></ion-icon>
+                </ion-button>
+              </div>  
+              <span class="label-emphasize">{{ rating?.rating || 'test ratings' }}</span> -->
+              
+              <ion-icon *ngIf="rating?.rating >= 1" color="secondary" name="star"></ion-icon>
+              <ion-icon *ngIf="rating?.rating < 1" color="secondary" name="star-outline"></ion-icon>
+              
+              <ion-icon *ngIf="rating?.rating >= 2" color="secondary" name="star"></ion-icon>
+              <ion-icon *ngIf="rating?.rating < 2" color="secondary" name="star-outline"></ion-icon>
+              
+              <ion-icon *ngIf="rating?.rating >= 3" color="secondary" name="star"></ion-icon>
+              <ion-icon *ngIf="rating?.rating < 3" color="secondary" name="star-outline"></ion-icon>
+              
+              <ion-icon *ngIf="rating?.rating >= 4" color="secondary" name="star"></ion-icon>
+              <ion-icon *ngIf="rating?.rating < 4" color="secondary" name="star-outline"></ion-icon>
+
+              <ion-icon *ngIf="rating?.rating >= 5" color="secondary" name="star"></ion-icon>
+              <ion-icon *ngIf="rating?.rating < 5" color="secondary" name="star-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+              {{ rating?.remarks || 'Test remarks' }} 
+            </ion-col>
+            <ion-col class="ion-no-padding ion-no-margin rating-timestamp">
+              {{ (rating?.timeStamp | fromNow) || 'Unknown Date'}}
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

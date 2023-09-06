@@ -1,0 +1,43 @@
+<ion-header mode="ios" translucent="true" class="ion-no-border">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-title collapse="false">welcome back, <span class="font-bold">{{ user?.firstName }}</span>!</ion-title>
+    <ion-buttons slot="end" >
+      <ion-menu-button autoHide="false" color="secondary">
+      </ion-menu-button>  
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="reInitializeApplication($event)" pullFactor="0.5" pullMin="100" pullMax="200">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      refreshingSpinner="lines"
+      color="secondary">      
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <app-main-card [user]="user"></app-main-card>
+  <div class="ion-list-container">
+    <ion-list-header class="search-result-list-header ion-no-padding">
+      <ion-label class="search-result-list-header-label" >Notifications</ion-label>
+      <ion-select class="filter-select" placeholder="Select One" [(ngModel)]="notificationFilter" (ionChange)="selectFilter($event)" selected="read">
+        <ion-select-option value="All">All</ion-select-option>
+        <ion-select-option value="Active">Unread</ion-select-option>
+        <ion-select-option value="Read">Read</ion-select-option>
+      </ion-select>
+    </ion-list-header>
+  </div>
+
+  <!-- <app-monthly-earnings></app-monthly-earnings> -->
+
+  <div *ngFor="let notif of filterNotifications">
+    <app-appointment-notification-card [notification]="notif" (click)="bookingDetails(notif)"></app-appointment-notification-card>
+  </div>
+
+  <ion-infinite-scroll threshold="10px" (ionInfinite)="loadMoreNotification($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

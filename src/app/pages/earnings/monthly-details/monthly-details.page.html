@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>EARNINGS</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/earnings']" routerDirection="backward" >
+        <!-- <ion-button (click)="exitBookingDetails()"> -->
+        <!-- <mat-icon class="material-icons" [inline]="true">arrow_back</mat-icon> -->
+        <ion-icon name="arrow-back-outline" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-list-container">
+    <ion-list-header class="search-result-list-header ion-no-padding">
+      <ion-label class="search-result-list-header-label" >Your Earnings!</ion-label>
+      <ion-button color="secondary" class="earnings-filter-button">
+        <ion-icon class="ion-no-padding ion-no-margin search-equalize-icon" src="assets/icons/equalizer.svg"></ion-icon>
+      </ion-button>
+    </ion-list-header>
+  </div>
+  <div *ngFor="let earning of monthlyEarning">
+    <app-earnings-detail [earning]="earning"></app-earnings-detail>
+  </div>
+</ion-content>

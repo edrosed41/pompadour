@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "794423715093",
+    "firebase_url": "https://pompadour-66371.firebaseio.com",
+    "project_id": "pompadour-66371",
+    "storage_bucket": "pompadour-66371.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794423715093:android:f9f2eb5108685c65e5351c",
+        "android_client_info": {
+          "package_name": "com.pompadour.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794423715093-esf2plmjpghamuhue72h655k9c0t3bti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClOl1o0LDS8Ir5lLQODFnbaqU2rEgIWoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794423715093-esf2plmjpghamuhue72h655k9c0t3bti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794423715093:android:6a3bbcfd1be328c5e5351c",
+        "android_client_info": {
+          "package_name": "com.pompadour.provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794423715093-esf2plmjpghamuhue72h655k9c0t3bti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClOl1o0LDS8Ir5lLQODFnbaqU2rEgIWoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794423715093-esf2plmjpghamuhue72h655k9c0t3bti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

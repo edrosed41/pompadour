@@ -1,0 +1,29 @@
+<ion-card [ngClass]="notification.status===notificationStatus.ACTIVE?'notification-unread':'notification-read'">
+  <ion-card-content class="ion-no-padding appoitnment-card">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon [color]="notification.status===notificationStatus.READ?'':'tertiary'" style="zoom:1.5" name="notifications-sharp" class="appointment-card-icon-bell"></ion-icon>
+        </ion-col>
+        <ion-col size="10">
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding appointment-card">
+              <span>{{ notification.body }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding appointment-card" [ngClass]="notification.status===notificationStatus.READ?'label-read':'label-unread'">
+              <span>{{ notification.dateCreated | fromNow }}</span>
+            </ion-col>
+            <ion-col *ngIf="notification.status===notificationStatus.ACTIVE" class="ion-no-padding appointment-card read-label">
+              show
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="1">
+          <ion-icon *ngIf="notification.status===notificationStatus.ACTIVE" color="tertiary" style="zoom:1.5" name="chevron-forward-outline" class="appointment-card-icon-go"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

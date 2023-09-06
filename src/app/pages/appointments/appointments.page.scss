@@ -1,0 +1,20 @@
+ion-content {
+    border-top: 1px solid var(--ion-color-secondary);
+}
+
+ion-segment {
+    --background: var(--ion-color-primary);
+    border-radius: 0;
+    // color: var(--ion-color-secondary);
+}
+
+ion-segment-button {
+    --color: var(--ion-color-secondary);
+    --border-radius: 0;
+    --border-width: 1px;
+    // --border-color: var(--ion-color-secondary);
+    --color-checked: var(--ion-color-primary);
+    --background: var(--ion-color-primary);
+    --background-checked: var(--ion-color-secondary);
+    --indicator-color: transparent!important;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "utter-technologies-pompadour-barber-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

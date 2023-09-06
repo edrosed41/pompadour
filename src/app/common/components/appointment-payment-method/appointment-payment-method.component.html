@@ -1,0 +1,35 @@
+<ion-list class="body-background-secondary">
+  <ion-list-header class="booking-summary-list-header">
+    
+    <ion-label class="list-header-label">
+      <ion-grid class="ion-no-padding ion-no-margin">
+        <ion-row class="ion-no-padding ion-no-margin">
+          <ion-col class="payment-method-header-col">
+            <span class="list-header-label">Payment Method</span>
+          </ion-col>
+          <ion-col class="payment-change-button-col" *ngIf="allowChangePaymentMethod">
+            <span color="secondary" class="payment-change-button" (click)="changePayment()">change</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid></ion-label>
+  </ion-list-header>
+  <ion-grid class="ion-padding booking-summary-grid booking-payment-grid">
+    <ion-row class="booking-summary-row">
+      <ion-col class="booking-summary-col-icon-end payment-method-col" size="1">
+        <ion-icon name="card-outline" style="zoom:1.5"></ion-icon>
+      </ion-col>
+      <ion-col class="booking-summary-label-col payment-method-col" size="6">
+        <!-- <ion-label class="booking-summary-label">(COD) <span class="payment-method-label">Cash-on-Delivery</span></ion-label> -->
+        <ion-label class="booking-summary-label payment-method-col-label">(COD) Cash-on-Delivery</ion-label>
+      </ion-col>
+      <ion-col class="booking-summary-value-col payment-method-col" size="4">
+        <ion-label class="payment-method-col-label">
+          {{ totalFee | stringcurrency}}
+        </ion-label>
+      </ion-col>
+      <ion-col class="booking-summary-col-icon-end payment-method-col" size="1">
+        <ion-icon color="secondary" name="chevron-forward-outline" style="zoom:1.5" ></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>

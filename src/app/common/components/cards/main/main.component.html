@@ -1,0 +1,37 @@
+<ion-card class="ion-no-padding ion-no-margin main-card" color="primary">
+  <!-- <ion-card-header> -->
+    <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    <!-- <ion-card-title>Card Title</ion-card-title> -->
+  <!-- </ion-card-header> -->
+
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3" class="align-center">
+          <div class="main-card-rating-container">
+            <ion-avatar (click)="goToEarnings()" class="align-bottom" class="main-card-avatar-income-rating">
+              <img src="assets/images/earnings-icon-2.png"/>
+            </ion-avatar>
+            <ion-label class="main-card-fullname">{{ user?.totalEarnings || 0 | number:'1.0':'en-US' }}.00 </ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="6" class="align-center">
+          <ion-avatar (click)="goToProfile()" class="main-card-avatar">
+            <img *ngIf="!user?.imagePath"  src="assets/images/stylist-1.png"/>
+            <img *ngIf="user?.imagePath"  [src]="user?.imagePath"/>
+          </ion-avatar>
+          <!-- <br/> -->
+          <ion-label class="main-card-fullname">{{ user?.fullName }}</ion-label>
+        </ion-col>
+        <ion-col size="3" class="align-center">
+          <div class="main-card-rating-container">
+            <ion-avatar (click)="goToRatings()" class="align-bottom" class="main-card-avatar-income-rating">
+              <img src="assets/images/rating-star.jpg"/>
+            </ion-avatar>
+            <ion-label class="main-card-fullname">{{ user?.rating > 0 ? (user?.rating | ratingformat) : 'N/A'}}</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

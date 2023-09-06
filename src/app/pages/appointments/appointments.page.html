@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>Booking History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refreshBookings($event)" pullFactor="0.5" pullMin="100" pullMax="200">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      refreshingSpinner="lines"
+      color="secondary">      
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Default Segment -->
+  <ion-segment (ionChange)="bookingSegmentChanged($event)" [ngModel]="bookingCategory">
+    <ion-segment-button value="today">
+      <ion-label>Upcoming</ion-label>
+      
+    </ion-segment-button>
+    <ion-segment-button value="history">
+      <ion-label>History</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="bookingCategory==='today'">
+    <ion-list>
+      <ion-list-header  class="service-list-header">
+        <ion-label class="service-list-header-label">UPCOMING APPONTMENTS</ion-label>
+      </ion-list-header>
+
+      <div *ngIf="filteredOnGoingBookings?.length > 0">
+        <app-appointment-card *ngFor="let appointment of filteredOnGoingBookings" [ongoing]="true" (click)="appointmentDetails(appointment)" [appointment]="appointment.appointmentCard"></app-appointment-card>
+      </div>
+      <app-appointment-card *ngFor="let appointment of filteredUpcomingBookings" [appointment]="appointment.appointmentCard" (click)="appointmentDetails(appointment)"></app-appointment-card>
+    </ion-list>
+  </div>
+  <div *ngIf="bookingCategory==='history'">
+    <ion-list>
+      <ion-list-header  class="service-list-header">
+        <ion-label class="service-list-header-label">PAST APPONTMENTS</ion-label>
+      </ion-list-header>
+      <app-appointment-card *ngFor="let appointment of filteredPastBookings" [past]="true"  (click)="appointmentDetails(appointment)" [appointment]="appointment.appointmentCard"></app-appointment-card>
+      
+    </ion-list>
+  </div>
+
+  <!-- Condition will be changed when past booking will be handled -->
+  <div class="container" *ngIf="(allAppointments && allAppointments.length === 0)">
+    <h6>You have'nt made any bookings yet. :)</h6>
+  </div>
+</ion-content>

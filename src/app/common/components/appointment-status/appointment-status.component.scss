@@ -1,0 +1,77 @@
+.booking-status-container {
+      background: #fff;
+      --background: #fff;
+  }
+  
+  .status-bar {
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 6px;
+      border-color: rgba(226, 199, 146, 0.25);
+      margin-right: 6px;
+  }   
+  
+  .status-bar-active {
+      border-color: var(--ion-color-primary);
+  }
+  
+  .status-bar-not-completed {
+      border-color: var(--ion-color-warning);
+  }
+
+  .not-completed {
+      text-align: left !important;
+      color: var(--ion-color-warning-shade) !important;
+  }
+
+  .status-bar-grid {
+      padding-left: 0;
+  }
+  
+  .booking-status-contact-span {
+      text-transform: uppercase;
+      color: rgba(42, 43, 55, 0.5);
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.1em;
+      font-size: 9px;
+      line-height: 11px;
+  }
+  
+  .booking-status-contact-icon-col {
+      padding: 0;
+      position: relative;
+      text-align: left;
+  }
+  
+  .booking-status-contact-icon {
+      width: 50px;
+      height: 50px;
+      top: -5px;
+      position: absolute;
+      color: rgba(226, 199, 146, 0.25);
+  }
+  
+  .booking-status-contact-icon-active {
+      color: var(--ion-color-secondary);
+  }
+  
+  .booking-status-arriaval-time-span {
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 10px;
+      line-height: 12px;
+      color: var(--ion-color-primary);
+  }
+  
+  .booking-status-span {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 9px;
+      line-height: 11px;
+      color: var(--ion-color-primary);
+  }
