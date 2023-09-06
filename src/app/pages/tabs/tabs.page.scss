@@ -1,0 +1,22 @@
+.app-tabs-toolbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+ion-tab-button {
+    padding: 10px;
+}
+
+ion-tab-button > .mat-icon {
+    color: #c6ae83;
+}
+
+ion-tab-button.tab-selected > .mat-icon {
+    color: #e1c695;
+}
+
+ion-tab-button.tab-selected { 
+    background: var(--ion-color-medium) !important; 
+}
+

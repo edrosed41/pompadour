@@ -1,0 +1,109 @@
+.app-booking-card {
+    text-transform: capitalize;
+    color: #2A2B37;
+    padding: 5px 5px 1px 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+}
+.booking-card-date-label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    align-items: center;
+    text-transform: capitalize;
+
+}
+
+.booking-card-col-left {
+    text-align: left;
+}
+
+.booking-card-col-right {
+    text-align: right;
+}
+
+.booking-card-service-time {
+    color: #E2C792;
+}
+
+.booking-card-row-bottom {
+    margin-top: 8px;
+}
+
+.booking-card-total-price-label {
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.booking-card-next-icon {
+    padding-top: 7px;
+}
+
+.appointment-card-client-name {
+    text-transform: capitalize;
+    // color: #2A2B37;
+    font-size: 12px;
+    line-height: 17px;
+    font-family: Montserrat;
+}
+
+.appointment-card-client-address {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--ion-color-secondary);
+    font-size: 12px !important;
+    line-height: 11px;
+    font-family: Montserrat;
+}
+
+.appointment-card-col-service {
+    padding: 3px;
+    --padding: 3px;
+    padding-inline-start: var(--ion-grid-column-padding-xs, var(--ion-grid-column-padding, 10px));
+    padding-inline-end: var(--ion-grid-column-padding-xs, var(--ion-grid-column-padding, 10px));
+}
+
+.appointment-card-service-name {
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.appointment-card-service-time {
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-secondary);
+}
+
+.appointment-card-datetime-label {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.appointment-service-price-label {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.appointment-ongoing {
+    background: var(--ion-color-primary);
+    --background: var(--ion-color-primary);
+    color: #fff;
+
+}
+
+.past-booking {
+    background: var(--ion-color-light-tint);
+    --background: var(--ion-color-light-tint);
+    color: #AAA;
+}

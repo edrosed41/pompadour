@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>PENDING CONFIRMATION</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button (click)=""[routerLink]="['/tabs/tabs/appointments']" routerDirection="backward" > -->
+        <ion-button (click)="signout()">
+        <!-- <mat-icon class="material-icons" [inline]="true">arrow_back</mat-icon> -->
+        <ion-icon name="arrow-back-outline" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <div class="container ion-padding">
+    <p class="user-information">Hi {{ user.fullName ||  getUserFullName() }},</p>
+    <br/>
+    <br/>
+    <p>
+      Thanks for getting started with pompadour! We need a little more information to complete your registration. We ecouraged you to visit our main office at <span class="address-phone-text">11 Dionisio Jakosalem St, Cebu City, Cebu</span>.
+      Or you may call our hotline <span class="address-phone-text">(032)412-1511</span> for faster approval of your registration application.
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>
+      Thanks,<br/>
+      Pompadour Team
+    </p>
+  </div>
+</ion-content>

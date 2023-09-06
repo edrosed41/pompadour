@@ -1,0 +1,62 @@
+<div class="ion-padding booking-status-container">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="7">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <span class="booking-status-arriaval-time-span">ETA {{ eta || 'N/A' }}*</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="status-bar-grid" *ngIf="!isPastAndNotCompleted()">
+              <ion-grid>
+                <ion-row>
+                  <ion-col class="status-bar status-bar-active"></ion-col>
+                  <ion-col class="status-bar" [ngClass]="(bookingStatus !== status.PENDING && bookingStatus !== status.RESERVED) ? 'status-bar-active' : ''"></ion-col>
+                  <ion-col class="status-bar" [ngClass]="(bookingStatus !== status.PENDING && bookingStatus !== status.RESERVED && bookingStatus !== status.ACCEPTED) ? 'status-bar-active' : ''"></ion-col>
+                  <ion-col class="status-bar" [ngClass]="(bookingStatus !== status.PENDING && bookingStatus !== status.RESERVED &&  bookingStatus !== status.ACCEPTED && bookingStatus !== status.ON_THE_WAY) ? 'status-bar-active' : ''"></ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+
+            <ion-col *ngIf="isPastAndNotCompleted()" >
+              <ion-grid class="status-bar-grid">
+                <ion-row>
+                  <ion-col class="status-bar status-bar-not-completed"></ion-col>
+                  <ion-col class="status-bar status-bar-not-completed"></ion-col>
+                  <ion-col class="status-bar status-bar-not-completed"></ion-col>
+                  <ion-col class="status-bar status-bar-not-completed"></ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col *ngIf="!isPastAndNotCompleted()">
+              <span class="booking-status-span">{{ bookingStatus | bookingstatusstring }}</span>
+            </ion-col>
+            <ion-col *ngIf="isPastAndNotCompleted()">
+              <span class="booking-status-span not-completed">
+                Appointment was not completed.<br/>If this is a bug, please contact<br> Pompadour Support Team.
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col size="5">
+          <ion-grid>
+            <ion-row>
+              <ion-col >
+                <span (click)="doChat()" class="booking-status-contact-span">
+                  contact your stylist
+                </span>
+              </ion-col>
+              <ion-col class="booking-status-contact-icon-col">
+                <ion-icon (click)="doChat()" name="chatbox" class="booking-status-contact-icon" [ngClass]="(bookingStatusCode !== statusCode.PENDING && bookingStatusCode !== statusCode.ACCEPTED) ? 'booking-status-contact-icon-active' : ''"></ion-icon>
+              </ion-col>
+            </ion-row>    
+          </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

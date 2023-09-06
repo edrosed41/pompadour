@@ -1,0 +1,61 @@
+.map-handler-container {
+      width: 100%;
+      height: 80%;
+}
+
+#map_canvas {
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+}
+
+
+#address {
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+}
+
+#mapView {
+      width: 100%;
+      height: 76vh;
+      position: relative !important;
+}
+
+.map-wrapper {
+      position: relative;
+
+      #map_center {
+            position: absolute;
+            z-index: 99;
+            height: 30px;
+            width: 30px;
+            top: 50%;
+            left: 50%;
+            margin-left: -21px;
+            margin-top: -41px;
+      }
+}
+
+ion-card {
+      max-height: 178px;
+      overflow: scroll;
+      position: absolute;
+      z-index: 1;
+      margin-inline-start: 10px;
+      margin-inline-end: 10px;
+      margin: 8px 16px;
+  }
+
+  ion-card-content {
+      -webkit-padding-start: 20px;
+      padding-inline-start: 10px;
+      -webkit-padding-end: 20px;
+      padding-inline-end: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.1;
+  }

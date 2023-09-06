@@ -1,0 +1,57 @@
+ion-avatar {
+      margin: auto;
+      width: 90px;
+      height: 90px;
+  }
+  
+  ion-content {
+      --background: var(--ion-color-primary);
+      background: var(--ion-color-primary);
+  }
+  
+  ion-list-header {
+      font-size: 14px;
+      line-height: 27px;
+  }
+  
+  ion-col {
+      padding-top: 20px;
+  }
+  
+  ion-item {
+      font-size: 12px;
+      --min-height: unset;
+      // --inner-border-width: 0;
+      --border-color: var(--ion-color-secondary);
+      color: #fff;
+      --padding-start: 10px;
+  }
+  
+  ion-label {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      color: #fff;
+  }
+  
+  
+  .faker-label {
+      color: transparent !important;
+  }
+  
+  .info-star-rating {
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+  }
+  
+  .edit-profile-button {
+      color: #fff;
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background: var(--ion-color-secondary);
+  }

@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-menu side="end" type="overlay" contentId="content">
+    <ion-header class="menu-header ion-no-border">
+      <ion-toolbar color="primary" mode="ios">
+        <ion-title>menu</ion-title>
+        <ion-buttons slot="end">      
+          <ion-button (click)="closeMenu()">
+            <!-- <mat-icon>close</mat-icon> -->
+            <ion-icon name="close" color="secondary"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="app-menu-content">
+        <div class="container">
+          <h3 (click)="goToAccount()">ACCOUNT SETTINGS</h3>
+          <h3 (click)="goToHelpCenter()">HELP CENTER</h3>
+          <h3 (click)="goToPrivacyPolicy()">PRIVACY POLICY</h3>
+          <h3 (click)="logout()">LOGOUT</h3>
+        </div>
+    </ion-content>
+    <ion-footer class="menu-header ion-no-border">
+      <ion-toolbar color="primary" mode="ios">
+        <ion-title class="app-version" color="light">Version 0.0.1</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-app>

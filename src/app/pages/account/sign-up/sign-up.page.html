@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>REGISTRATION</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="gotoLogin()">
+        <ion-icon name="arrow-back-outline" color="secondary">Cancel</ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-otp-handler *ngIf="presentOTPPage" (componentResponse)="otpModalDidResponse($event)" [otpMobileNumber]="mobileNumberToRegister"></app-otp-handler>
+
+  <div>
+    <div class="sign-in-container">
+      <form [formGroup]="registerForm" novalidate>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <!-- <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label> -->
+              <ion-item class="ion-no-padding">
+                <ion-input class="capitalize-name" [ngClass]="(didSubmit && errorControl.firstname.errors) ? 'input-error': ''" autocapitalize="on" formControlName="firstname" placeholder="First Name" type="text" inputmode="text" clear-input="true" required autocapitalize></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.firstname.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.firstname.errors" class="error-message">First name is invalid.</p>
+            </ion-col>
+            <ion-col>
+              <!-- <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label> -->
+              <ion-item class="ion-no-padding">
+                <ion-input class="capitalize-name" [ngClass]="(didSubmit && errorControl.lastname.errors) ? 'input-error': ''" formControlName="lastname" placeholder="Last Name" type="text" inputmode="text" clear-input="true" required autocapitalize></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.lastname.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.lastname.errors" class="error-message">Last name is invalid.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item class="ion-no-padding">
+                <ion-input [ngClass]="(didSubmit && errorControl.email.errors) ? 'input-error': ''" formControlName="email" placeholder="Email" type="text" inputmode="text" clear-input="true" required></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.email.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.email.errors" class="error-message">Email value is invalid.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item class="ion-no-padding">
+                <ion-label class="account-phone-number-input-label">+63</ion-label>
+                <ion-input [ngClass]="(didSubmit && errorControl.mobileNumber.errors) ? 'input-error': ''" formControlName="mobileNumber" placeholder="Mobile Number" clear-input="true" max="10" type="tel" inputmode="tel" clear-input="true" maxlength="10" minlength="10"  required></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.mobileNumber.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p>Please fill in the 10 remaining digits e.g. 912356478.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item class="ion-no-padding">
+                <ion-input [ngClass]="(didSubmit && errorControl.username.errors) ? 'input-error': ''" formControlName="username" placeholder="Username" type="text" inputmode="text" clear-input="true" required></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.username.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.username.errors" class="error-message">Username should be at least 8 characters long.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item class="ion-no-padding">
+                <ion-input [ngClass]="(didSubmit && errorControl.password.errors) ? 'input-error': ''" formControlName="password" placeholder="Password" type="password" inputmode="password" clear-input="true" required></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.password.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.password.errors" class="error-message">Password should be at least 8 characters long.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item class="ion-no-padding">
+                <ion-input [ngClass]="(didSubmit && errorControl.confirmPassword.errors) ? 'input-error': ''" formControlName="confirmPassword" placeholder="Conffirm Password" type="password" inputmode="password" clear-input="true" required></ion-input>
+                <ion-icon *ngIf="didSubmit && errorControl.confirmPassword.errors" class="error-message-icon" name="alert-circle" color="danger" slot="end"></ion-icon>
+              </ion-item>
+              <p *ngIf="didSubmit && errorControl.confirmPassword.errors" class="error-message">Password did not match.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="terms-and-privacy-link">
+                By clicking <i>"</i>FINISH<i>"</i>, you acknowledge that you have read and agreed to our <a>Terms and Conditions</a> and <a>Privacy Policy Statement</a>.
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </div>
+  </div>
+  <div class="booking-button-section booking-button-section-absolute">
+    <!-- <ion-button [disabled]="!enableCheckout" (click)="register()" expand="block" class="booking-button">FINISH</ion-button> -->
+    <ion-button (click)="register()" expand="block" class="booking-button">FINISH</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>Appointment Details</ion-title>
+
+    <ion-buttons slot="start">
+      <!-- <ion-button (click)=""[routerLink]="['/tabs/tabs/appointments']" routerDirection="backward" > -->
+        <ion-button (click)="exitBookingDetails()">
+        <!-- <mat-icon class="material-icons" [inline]="true">arrow_back</mat-icon> -->
+        <ion-icon name="arrow-back-outline" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body-background-secondary">
+  <app-map-handler *ngIf="!isPastBooking && (appointmentDetails?.status === appontmentStatus.ON_THE_WAY || appointmentDetails?.status === appontmentStatus.ARRIVED)" 
+    [bookingId]="appointmentDetails?.bookingId" [bookingLatitude]="appointmentDetails?.latitude" [bookingLongitude]="appointmentDetails?.longitude" (locationUpdate)="providerUpdateLocation($event)" (enteredArrivalRadius)="enteredArrivalRadius($event)"></app-map-handler>
+
+  <app-appointment-status [eta]="appointmentDetails.time" [isPast]="isPastBooking" [bookingStatus]="appointmentDetails?.status"></app-appointment-status>
+
+  <app-appointment-summary [service]="appointmentDetails?.serviceSelected" [totalFee]="appointmentDetails?.fees"></app-appointment-summary>
+  <app-appointment-schedule [bookingDateTime]="bookingDateTime"></app-appointment-schedule>
+  <app-appointment-contact-information [contactInfomation]="bookingCustomerAccount" [enableInputFields]="false" ></app-appointment-contact-information>
+  <app-appointment-payment-method [totalFee]="appointmentDetails?.fees"></app-appointment-payment-method> 
+
+  <div class="booking-button-section booking-button-section-absolute">
+    <ion-button *ngIf="!isPastBooking && (appointmentDetails?.status === appontmentStatus.PENDING || appointmentDetails?.status === appontmentStatus.RESERVED || appointmentDetails?.status === appontmentStatus.ACCEPTED)" [disabled]="!isAllowedToOnTheWay()" (click)="confirmOnTheWay()" expand="block" class="booking-button">On The Way</ion-button>
+    <ion-button *ngIf="!isPastBooking && (appointmentDetails?.status === appontmentStatus.ON_THE_WAY)" [disabled]="!isAllowedToArrive" (click)="confirmArrived()" expand="block" class="booking-button">Arrived</ion-button>
+    <ion-button *ngIf="!isPastBooking && (appointmentDetails?.status === appontmentStatus.ARRIVED)" (click)="confirmStartAppointment()" expand="block" class="booking-button">Start Appointment</ion-button>
+    <ion-button *ngIf="!isPastBooking && (appointmentDetails?.status === appontmentStatus.IN_PROGRESS)" (click)="confirmCompleted()" expand="block" class="booking-button">Completed</ion-button>
+
+    <ion-button *ngIf="enableFeedback && (isPastBooking || appointmentDetails?.status === appontmentStatus.COMPLETED)" (click)="openRatingModal()" expand="block" class="booking-button">Give Feedback</ion-button>
+  </div>
+
+  <!-- <div class="booking-button-section booking-button-section-absolute"> -->
+    <!-- <ion-button *ngIf="appointmentDetails?.status === appontmentStatus.PENDING || appointmentDetails?.status === appontmentStatus.RESERVED" (click)="confirmAppointment()" expand="block" class="booking-button">Confirm</ion-button> -->
+    <!-- <ion-button *ngIf="appointmentDetails?.status === appontmentStatus.PENDING || appointmentDetails?.status === appontmentStatus.RESERVED" (click)="declineAppointment()" expand="block" class="booking-button booking-button-decline">Decline</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast" (click)="confirmAppointment()" expand="block" class="booking-button">Confirm</ion-button>
+    <ion-button *ngIf="!appointmentDetails.isPast" (click)="declineAppointment()" expand="block" class="booking-button booking-button-decline">Decline</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast && (appointmentDetails?.status === appontmentStatus.PENDING || appointmentDetails?.status === appontmentStatus.RESERVED || appointmentDetails?.status === appontmentStatus.ACCEPTED)" [disabled]="!isAllowedToOnTheWay()" (click)="confirmOnTheWay()" expand="block" class="booking-button">On The Way</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast && (appointmentDetails?.status === appontmentStatus.PENDING || appointmentDetails?.status === appontmentStatus.RESERVED || appointmentDetails?.status === appontmentStatus.ACCEPTED)" (click)="confirmOnTheWay()" expand="block" class="booking-button">On The Way</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast && (appointmentDetails?.status === appontmentStatus.ON_THE_WAY)" [disabled]="!isAllowedToArrive" (click)="confirmArrived()" expand="block" class="booking-button">Arrived</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast && (appointmentDetails?.status === appontmentStatus.ARRIVED)" (click)="confirmStartAppointment()" expand="block" class="booking-button">Start Appointment</ion-button> -->
+    <!-- <ion-button *ngIf="!appointmentDetails.isPast && (appointmentDetails?.status === appontmentStatus.IN_PROGRESS)" (click)="confirmCompleted()" expand="block" class="booking-button">Completed</ion-button> -->
+  <!-- </div> -->
+</ion-content>

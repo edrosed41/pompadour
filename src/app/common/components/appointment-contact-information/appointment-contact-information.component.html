@@ -1,0 +1,133 @@
+<ion-list class="body-background-secondary">
+  <ion-list-header class="booking-summary-list-header">
+    <ion-label class="list-header-label">Contact Information</ion-label>
+  </ion-list-header>
+  
+  <ion-grid class="ion-padding booking-summary-grid">
+    <ion-row class="booking-summary-row">
+      <ion-col class="booking-summary-label-col" size="4">
+        <ion-label class="booking-summary-label">Email Address</ion-label>
+      </ion-col>
+      <ion-col class="booking-summary-value-col" size="8">
+        <ion-label class="booking-summary-value-thin">
+          {{ contactInfomation?.email }}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="booking-summary-label-col" size="4">
+        <ion-label class="booking-summary-label">Full Name</ion-label>
+      </ion-col>
+      <ion-col class="booking-summary-value-col" size="8">
+        <ion-label class="booking-summary-value-thin">
+          {{ contactInfomation?.fullName }}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="booking-summary-label-col" size="5">
+        <ion-label class="booking-summary-label">Phone Number</ion-label>
+      </ion-col>
+      <ion-col class="booking-summary-value-col" size="7">
+        <ion-label class="booking-summary-value-thin">
+          +{{ contactInfomation?.mobileNumber }}
+        </ion-label>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-no-padding ion-no-margin">
+        <ion-grid> 
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-label-col">
+              <ion-label class="booking-summary-label">Address</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-value-thin">
+              {{ contactInfomation?.address }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>  
+    </ion-row>
+    
+
+    <ion-row *ngIf="enableInputFields">
+      <ion-col class="ion-no-padding ion-no-margin">
+        <ion-grid> 
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-label-col">
+              <ion-label class="booking-summary-label">Address Details</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding">
+              <ion-textarea auto-grow="true" [(ngModel)]="addressDetail" (ionChange)="addressDetailChanged()" class="booking-contact-info-input" placeholder="Address Details"></ion-textarea>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row *ngIf="enableInputFields">
+      <ion-col class="ion-no-padding ion-no-margin">
+        <ion-grid> 
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-label-col">
+              <ion-label class="booking-summary-label">Notes</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding">
+              <ion-textarea auto-grow="true" [(ngModel)]="notes" (ionChange)="notesChanged()" class="booking-contact-info-input" placeholder="Notes"></ion-textarea>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="!enableInputFields">
+      <ion-col class="ion-no-padding ion-no-margin">
+        <ion-grid> 
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-label-col">
+              <ion-label class="booking-summary-label">Address Details</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-value-thin">
+              {{ contactInfomation?.addressDetail }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row *ngIf="!enableInputFields">
+      <ion-col class="ion-no-padding ion-no-margin">
+        <ion-grid> 
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-label-col">
+              <ion-label class="booking-summary-label">Notes</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding booking-summary-value-thin">
+              {{ contactInfomation?.notes }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-list>

@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-card-content class="ion-no-padding appoitnment-card">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" class="icon-col ">
+          <!-- <ion-icon class="icon-user-earning" src="assets/images/earnings-2.svg"></ion-icon> -->
+          <ion-icon class="icon-user-earning" name="person-circle"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+              <span class="label-emphasize">{{ earning?.date }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+              {{ earning?.remarks }} 
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

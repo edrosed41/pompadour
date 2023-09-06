@@ -1,0 +1,484 @@
+.font-bold {
+    font-weight: bold;
+}
+
+.font-four-hunder {
+    font-weight: 400;
+}
+
+.monsterrat-bold {
+    font-family: Montserrat-Bold;
+}
+
+
+.body-background-secondary {
+    --background: #E5E5E5;
+    background: #E5E5E5;
+}
+
+
+.container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.booking-summary-grid {
+    --background: #fff;
+    background: #fff;
+
+    
+    font-style: normal;
+    font-weight: bold;
+    
+    
+    align-items: center;
+    text-transform: capitalize;
+
+    color: #2A2B37;
+    --padding-top: var(--ion-padding, 10px);
+    --padding-bottom: var(--ion-padding, 10px);
+    padding-top: var(--ion-padding, 10px);
+    padding-bottom: var(--ion-padding, 10px);
+}
+
+.booking-summary-label-col {
+    text-align: left;
+    text-align: left;
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+}
+
+.booking-summary-value-col {
+    text-align: right;
+}
+
+.booking-summary-col-icon-end {
+    text-align: right;
+}
+
+.booking-summary-col-divider {
+    border: 0;
+    --border: 0;
+    border-bottom-style: solid;
+    border-bottom-color: #E2C792;
+    border-bottom-width: thin;
+
+    --border-bottom-style: solid;
+    --border-bottom-color: #E2C792;
+    --border-bottom-width: thin;
+}
+.booking-summary-list-header {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    min-height: auto;
+}
+
+.booking-summary-label {
+    display: block;
+}
+
+.booking-summary-sub-label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #E2C792;
+
+}
+
+.booking-summary-value-thin {
+    
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.booking-button { 
+    --border-radius: 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    height: 48px;
+    color: var(--ion-color-secondary);
+}
+
+.booking-button-section {
+    padding: 30px 30px 10px;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+}
+
+.booking-button-section-absolute {
+    /* position: absolute; */
+}
+
+.service-list {
+    --background: transparent;
+}
+.service-list-header {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    min-height: auto;
+}
+
+.list-header-label {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.service-list-header-label, .booking-list-header-label {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.service-name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.service-time {
+    font-style: normal;
+    font-size: 9px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-secondary);
+}
+
+.service-price {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+.search-provider-card-name {
+    text-transform: capitalize;
+    color: #2A2B37;
+    font-size: 12px;
+    line-height: 17px;
+    /* font-weight: bold; */
+    font-family: Montserrat;
+}
+
+.search-provider-card-affiliation {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-weight: bold !important;
+    font-size: 9px !important;
+    line-height: 11px;
+    font-family: Montserrat-Bold;
+}
+
+.custom-datepicker-modal {
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 45% 7%  !important;
+ }
+
+ .custom-datepicker-modal > div.modal-wrapper {
+    border-radius: 15px !important;
+ }
+
+ .align-center {
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+}
+
+/** Sign-in and Sign-up Styles **/
+.app-login-content {
+    --background: var(--ion-color-primary);
+}
+
+.app-logo-container img {
+    max-width: 60%;
+}
+
+.firebaseui-idp-button, .firebaseui-tenant-button {
+    min-height: 45px !important; 
+    text-align: center !important;
+    max-width: 100% !important;
+    border-radius: 30px;
+}
+.firebaseui-provider-sign-in-footer p{
+    
+    font-size: 12px !important;
+    font-weight: 400;   
+}
+
+.firebaseui-link {
+    color: var(--ion-color-secondary-shade); 
+}
+
+.account-input-list {
+    background-color: transparent;
+    background: transparent;
+    --background: transparent;
+    padding: 5px 35px;
+}
+
+.account-input-ion-item {
+    background-color: #fff;
+    border-radius: 30px;
+    /* margin: 8px; */
+    color: var(--ion-color-primary);
+    
+    
+    position: relative;
+}
+
+.account-input-ion-button {
+    border-radius: 30px; 
+    width: 100%;
+    --border-radius: 30px;
+    /* margin-top: 25px; */
+}
+
+.horizontal-line {
+    width: 80%; 
+    text-align: center; 
+    border-bottom: .8px solid #8c8c8c; 
+    line-height: 0.01rem;
+    margin: 0 auto; 
+    font-weight: 200;
+  } 
+  
+  .horizontal-line span { 
+      background:var(--ion-color-primary); 
+      padding:0 10px; 
+      
+      
+  }
+
+  .account-input-other-option {
+      
+      color: #fff;
+      
+  }
+
+  .account-input-other-option-link {
+      color: var(--ion-color-secondary);
+      
+      display: block;
+  }
+
+  .div-divider {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      --marging-top: 10px;
+      --margin-bottom: 10px;
+  }
+
+  .account-phone-number-input-label {
+    font-style: italic;
+    color: var(--ion-color-medium-tint);
+    font-size: 12px !important;
+    line-height: 17px;
+  }
+
+  .account-input {
+      font-style: italic;
+      font-size: 12px;
+      line-height: 17px;
+  }
+
+  .input-error {
+      color: var(--ion-color-danger);
+      transition: .3s all;
+  }
+
+  /** OTP Modal Page Design **/
+.otp-validato-modal {
+    background: rgba(0, 0, 0, 0.1) !important;
+    padding: 0 7%  !important;
+}
+
+
+ .otp-validato-modal > div.modal-wrapper {
+    border-radius: 15px !important;
+    height: 385px;
+    min-height: 385px;
+ }
+
+ /*** Rating Modal ***/
+ .rating-modal {
+    background: rgba(0, 0, 0, 0.1) !important;
+    padding: 0 7%  !important;
+}
+
+
+ .rating-modal > div.modal-wrapper {
+    border-radius: 15px !important;
+    height: 70%;
+    min-height: 70%;
+ }
+
+ 
+ /** Loading Spinner **/
+ .custom-loading-class {
+    --background: transparent;
+    --spinner-color: var(--ion-color-secondary);
+    
+}
+
+/** toast **/
+.custom-toast-design {
+    
+    
+    --max-height: auto;
+    --height: 42px auto;
+}
+
+.custom-toast-icon {
+    font-size: 26px;
+}
+
+/** booking date time **/
+.service-card {
+    padding: 10px 5px;
+    border-radius: 30px;
+    margin-top: 5px;
+}
+
+.card-col-icon {
+    text-align: center;
+}
+
+.card-label-icon {
+    color: var(--ion-color-primary);
+}
+
+.booking-date-card-input {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #2A2B37;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.booking-date-card-icon {
+    padding: 5% 0;
+}
+
+.firebaseui-container {
+    max-width: unset !important;
+}
+
+.error-message-container {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    /* font-family: Roboto; */
+    font-style: italic;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+}
+
+.error-message-icon {
+    font-size: 24px;
+}
+
+
+/* .decline-alert-style .alert-message{  
+    text-align: left;
+    font-size: 11px;
+    line-height: 13px;
+} */
+
+.ion-list-container {
+    padding: 0px 16px 0 16px;
+  --padding: 0px 16px 0 16px;
+}
+
+.search-result-list-header {
+    border-bottom-style: solid;
+    border-bottom-color: var(--ion-color-secondary);
+    border-bottom-width: 1px;  
+    min-height: 20px;  
+}
+
+.search-result-list-header-label {
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-select {
+    font-style: unset;
+    font-weight: 400;
+    font-size: 12px;
+    --padding-bottom: 5px;
+}
+
+.earnings-filter-button {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.icon-col {
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--ion-color-tertiary-shade);
+}
+
+.icon-user-earning {
+    vertical-align: middle;
+}
+
+.label-emphasize {
+    font-weight: 600;
+    color: var(--ion-color-secondary);
+}
+
+.earnings-amount {
+    text-align: right;
+}
+
+.icon-next-col {
+    text-align: center;
+}

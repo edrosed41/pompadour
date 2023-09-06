@@ -1,0 +1,30 @@
+<ion-card>
+  <ion-card-content class="ion-no-padding appoitnment-card">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" class="icon-col ">
+          <ion-icon class="icon-user-earning" src="assets/images/earnings-2.svg"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+              <span class="label-emphasize">{{ earnings?.month }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+              Appointments: {{ earnings?.appointments || 0 }} 
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin" size="5"> Gift Card: {{ earnings.giftCard || 0 }} </ion-col>
+            <ion-col class="ion-no-padding ion-no-margin label-emphasize earnings-amount" size="6"> {{ earnings?.sales || 0 | stringcurrency }}</ion-col>
+            <ion-col class="ion-no-padding ion-no-margin icon-next-col" size="1">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,48 @@
+.main-card-avatar {
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      background: var(--ion-color-secondary);
+}
+
+.main-card-fullname {
+      font-weight: bold;
+      font-size: 16px;
+      margin: auto;
+      color: var(--ion-color-primary);
+      text-align: center;
+}
+
+ion-button {
+      background: transparent;
+      --background: transparent;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      --padding-start: 0;
+      --padding-end: 0;
+      --background-activated: transparent;
+      --background-focused: transparent;
+      --background-hover: transparent;
+      color: var(--ion-color-secondary);
+}
+
+ion-textarea {
+      border: 1px solid var(--ion-color-primary);
+      padding-left: 10px;
+      font-size: 13px;
+}
+
+
+ion-item {
+      --padding-start: 10px;
+}
+
+ion-col {
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+}
+
+.rating-content {
+      background: transparent;
+      --background: transparent;
+}

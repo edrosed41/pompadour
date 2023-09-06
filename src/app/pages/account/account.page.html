@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-title>ACCOUNT</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="editProfile()">
+        Edit
+        <ion-icon style="zoom: .8;" name="cog-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="basic-info">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-avatar class="profile-avatar">
+              <!-- <img src="assets/images/stylist-1.png"> -->
+              <img *ngIf="!user?.imagePath"  src="assets/images/stylist-1.png"/>
+              <img *ngIf="user?.imagePath"  [src]="user?.imagePath"/>
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="info-star-rating">
+            
+            <ion-label>
+              <ion-icon name="star" color="secondary"></ion-icon> {{ user?.rating > 0 ? (user?.rating | ratingformat) : 'N/A' }}
+            </ion-label>
+            <br/>
+            <!-- <ion-button class="edit-profile-button" fill="clear" (click)="editProfile()">
+              Edit Profile  <ion-icon name="chevron-forward" color="secondary"></ion-icon>
+            </ion-button> -->
+            <!-- <ion-label>
+              Edit Profile <ion-icon name="chevron-forward" color="warning"></ion-icon>
+            </ion-label> -->
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-icon name="person-outline" color="secondary"></ion-icon>
+              &nbsp;<ion-label>Full Name</ion-label>
+            <ion-item>
+              <ion-label>{{ user?.firstName || 'N/A' }}</ion-label>
+            </ion-item>
+          </ion-col> 
+          <ion-col>
+            <ion-icon name="person-outline" class="faker-label"></ion-icon>
+              &nbsp;<ion-label>&nbsp;</ion-label>
+            <ion-item>
+              <ion-label>{{ user?.lastName || 'N/A' }}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-icon name="mail" color="secondary"></ion-icon>
+            &nbsp;<ion-label>Email</ion-label>
+            <ion-item>
+              <ion-label>{{ user?.emailAddress || 'N/A' }}</ion-label>
+            </ion-item>
+          </ion-col> 
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-icon name="phone-portrait-sharp" color="secondary"></ion-icon>
+              &nbsp;<ion-label>Mobile Number</ion-label>
+            <ion-item>
+              <ion-label>{{ user?.mobileNumber || 'N/A' }}</ion-label>
+            </ion-item>
+          </ion-col> 
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <ion-icon name="location-sharp" color="secondary"></ion-icon>
+              &nbsp;<ion-label>Address</ion-label>
+            <ion-item>
+              <ion-label>{{ user?.address1 || 'N/A' }}</ion-label>
+            </ion-item>
+          </ion-col> 
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    
+</ion-content>

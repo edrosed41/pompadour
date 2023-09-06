@@ -1,0 +1,299 @@
+
+$font-family-base: Montserrat;
+$font-family-ios-base: Montserrat;
+$font-family-md-base: Montserrat;
+$font-family-wp-base: Montserrat;
+
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  // --ion-color-primary: #2a2b37;
+  // --ion-color-primary-rgb: 42,43,55;
+  // // --ion-color-primary-contrast: #ffffff;
+  // --ion-color-primary-contrast: #e1c695;
+  // --ion-color-primary-contrast-rgb: 255,255,255;
+  // --ion-color-primary-shade: #252630;
+  // --ion-color-primary-tint: #3f404b;
+
+  // --ion-color-secondary: #e1c695;
+  // --ion-color-secondary-rgb: 225,198,149;
+  // --ion-color-secondary-contrast: #000000;
+  // --ion-color-secondary-contrast-rgb: 0,0,0;
+  // --ion-color-secondary-shade: #c6ae83;
+  // --ion-color-secondary-tint: #e4cca0;
+
+  // --ion-color-tertiary: #FFE894;
+  // --ion-color-tertiary-rgb: 255,232,148;
+  // --ion-color-tertiary-contrast: #000000;
+  // --ion-color-tertiary-contrast-rgb: 0,0,0;
+  // --ion-color-tertiary-shade: #e0cc82;
+  // --ion-color-tertiary-tint: #ffea9f;
+
+  // --ion-color-success: #2dd36f;
+  // --ion-color-success-rgb: 45,211,111;
+  // --ion-color-success-contrast: #ffffff;
+  // --ion-color-success-contrast-rgb: 255,255,255;
+  // --ion-color-success-shade: #28ba62;
+  // --ion-color-success-tint: #42d77d;
+
+  // --ion-color-warning: #ffc409;
+  // --ion-color-warning-rgb: 255,196,9;
+  // --ion-color-warning-contrast: #000000;
+  // --ion-color-warning-contrast-rgb: 0,0,0;
+  // --ion-color-warning-shade: #e0ac08;
+  // --ion-color-warning-tint: #ffca22;
+
+  // // --ion-color-danger: #eb445a;
+  // // --ion-color-danger-rgb: 235,68,90;
+  // // --ion-color-danger-contrast: #ffffff;
+  // // --ion-color-danger-contrast-rgb: 255,255,255;
+  // // --ion-color-danger-shade: #cf3c4f;
+  // // --ion-color-danger-tint: #ed576b;
+
+  // --ion-color-danger: #f9848b;
+  // --ion-color-danger-rgb: 249,132,139;
+  // --ion-color-danger-contrast: #ffffff;
+  // --ion-color-danger-contrast-rgb: 255,255,255;
+  // --ion-color-danger-shade: #db747a;
+  // --ion-color-danger-tint: #fa9097;
+
+  // --ion-color-dark: #222428;
+  // --ion-color-dark-rgb: 34,36,40;
+  // --ion-color-dark-contrast: #ffffff;
+  // --ion-color-dark-contrast-rgb: 255,255,255;
+  // --ion-color-dark-shade: #1e2023;
+  // --ion-color-dark-tint: #383a3e;
+
+  // --ion-color-medium: #353641;
+  // --ion-color-medium-rgb: 53,54,65;
+  // --ion-color-medium-contrast: #ffffff;
+  // --ion-color-medium-contrast-rgb: 255,255,255;
+  // --ion-color-medium-shade: #2f3039;
+  // --ion-color-medium-tint: #494a54;
+
+  // --ion-color-light: #f4f5f8;
+  // --ion-color-light-rgb: 244,245,248;
+  // --ion-color-light-contrast: #000000;
+  // --ion-color-light-contrast-rgb: 0,0,0;
+  // --ion-color-light-shade: #d7d8da;
+  // --ion-color-light-tint: #f5f6f9;
+
+  --ion-color-primary: #000000;
+  --ion-color-primary-rgb: 0,0,0;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #000000;
+  --ion-color-primary-tint: #1a1a1a;
+
+  --ion-color-secondary: #E5A417;
+  --ion-color-secondary-rgb: 229,164,23;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0,0,0;
+  --ion-color-secondary-shade: #ca9014;
+  --ion-color-secondary-tint: #e8ad2e;
+
+  --ion-color-tertiary: #FFC600;
+  --ion-color-tertiary-rgb: 255,198,0;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0,0,0;
+  --ion-color-tertiary-shade: #e0ae00;
+  --ion-color-tertiary-tint: #ffcc1a;
+
+  --ion-color-success: #E2C792;
+  --ion-color-success-rgb: 226,199,146;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0,0,0;
+  --ion-color-success-shade: #c7af80;
+  --ion-color-success-tint: #e5cd9d;
+
+  --ion-color-warning: #eb445a;
+  --ion-color-warning-rgb: 235,68,90;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255,255,255;
+  --ion-color-warning-shade: #cf3c4f;
+  --ion-color-warning-tint: #ed576b;
+
+  --ion-color-danger: #AD2831;
+  --ion-color-danger-rgb: 173,40,49;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #98232b;
+  --ion-color-danger-tint: #b53e46;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34,36,40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #222428;
+  --ion-color-medium-rgb: 146,148,156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244,245,248;
+  --ion-color-light-contrast: #666666;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+  
+  --ion-color-smoke: #666666;
+  --ion-color-smoke-rgb: 244,245,248;
+  --ion-color-smoke-contrast: #666666;
+  --ion-color-smoke-contrast-rgb: 0,0,0;
+  --ion-color-smoke-shade: #d7d8da;
+  --ion-color-smoke-tint: #f5f6f9;
+
+  --ion-font-family: Montserrat !important;
+  font-size: 12px;
+};
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Motserrat;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--ion-color-primary);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../assets/fonts/Montserrat/Montserrat-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../assets/fonts/Montserrat/Montserrat-BoldItalic.ttf');
+}
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Motserrat;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--ion-color-primary);
+}
+
+ion-title {
+  // font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-inline-start: 50px;
+  padding-inline-end: 50px;
+  color: var(--ion-color-secondary);
+}
+
+ion-header {
+  --background: var(--ion-color-primary);
+  background-color: var(--ion-color-primary);
+  // padding-left: 15px;
+  // padding-right: 15px;
+  // --padding-left: 15px;
+  // --padding-right: 15px;
+}
+
+// ion-header ion-toolbar {
+//   padding-top: 10px !important;
+// }
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ion-color-secondary);
+  font-weight: 300 !important;
+}
+
+ion-item {
+  --background: transparent;
+  background: transparent;
+  color: var(var(--ion-color-secondary));
+}
+
+ion-icon {
+  &.big {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.bigger {
+    width: 100px;
+    height: 100px;
+  }
+
+  &.red {
+    color: red;
+  }
+}
+
+ion-picker {
+  touch-action: none;
+}
+
+.custom-spinner-class {
+  ion-spinner {
+      width: 40px;
+      height: 40px;
+  }
+}
+
+.autosuggest-searchbar {
+  input{
+     font-size: 12px !important;  
+     font-weight: 600 !important;
+  }
+}
+
+.align-center {
+  position: relative;
+  display: inline-grid;
+  align-items: center;
+}
+
+ion-refresher ion-spinner {
+  color: var(--ion-color-secondary);
+}
+
+ion-refresher ion-icon {
+  color: var(--ion-color-secondary);
+}
+
+.custom-loading-class .loading-wrapper {
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+
+.loading-wrapper.sc-ion-loading-md {
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}

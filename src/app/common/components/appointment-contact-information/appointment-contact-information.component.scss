@@ -1,0 +1,41 @@
+.booking-contact-info-input {
+    --padding-bottom: 0;
+    --padding-top: 0;
+    --padding-end: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--ion-color-primary);
+}
+
+.booking-contact-email-input {
+    text-transform: lowercase;
+}
+
+.booking-contact-info-input.has-focus {
+    border-bottom: thin solid var(--ion-color-primary-tint);
+}
+
+.invalid-input {
+    color: var(--ion-color-danger);
+}
+
+.invalid-input.has-focus {
+    border-bottom: thin solid var(--ion-color-danger-tint);
+}
+
+.booking-contact-info-phone-label {
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
+    color: var(--ion-color-dark-tint);
+    font-style: italic;
+} 
+
+.booking-contact-info-phone-input {
+    text-align: right;
+}
+
+.booking-contact-info-item {
+    min-height: auto !important;
+    --min-height: auto;
+}

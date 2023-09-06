@@ -1,0 +1,31 @@
+.payment-method-header-col {
+    text-align: left;
+}
+
+.payment-change-button-col {
+    text-align: right;
+}
+
+.payment-method-label {
+    font-size: 10px;
+}
+
+.payment-method-header-label {
+    text-transform: capitalize;
+}
+
+.payment-change-button {
+    text-transform: capitalize;
+    color: #E2C792;
+    padding: 5%;
+}
+
+.payment-method-col {
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+}
+
+.booking-payment-grid {
+    margin-bottom: 25px;
+}
